@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad Web</title>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body id="body">
+    <nav class="nav" id="nav">
+        <p class="nav__logo">MiWebAccesible</p>
+        <ul class="nav__links">
+            <li class="nav__link"><a href="#home" class="nav__item">Inicio</a></li>
+            <li class="nav__link"><a href="#aboutHTML" class="nav__item">Sobre HTML</a></li>
+            <li class="nav__link"><a href="#aboutJS" class="nav__item">Sobre JS</a></li>
+            <li class="nav__link"><a href="#tools" class="nav__item">Herramientas</a></li>
+        </ul>
+        <div class="nav__buttons">
+            <button class="nav__button nav__menu" id="menu" aria-label="Navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" 
+                    style="fill:rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                    <path 
+                        d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z">
+                    </path>
+                </svg>
+            </button>
+            <button class="nav__button" id="switch" aria-label="Theme button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                    <path
+                        d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <header class="header" id="home">
+        <h1 class="header__title">¿Cómo <br>crear un sitio web más <span><i>accesible</i></span>?</h1>
+        <p>La accesibilidad web refiere a hacer que un sitio web sea accesible para todos, especialmente para los usuarios con discapacidades o capacidades 
+            diferentes. Para lograr esto, se fomenta el uso de diseño inclusivo, tecnología integrada y software.</p>
+    </header>
+        <h2 class="subtitle" id="aboutHTML">Algunos simples cambios en nuestro código HTML</h2>
+        <section class="semantic">
+            <h3>HTML Semántico</h3>
+            <p class="info">El HTML semántico es un concepto para estructurar y escribir código HTML de modo que el 
+                significado del contenido de una página web sea claro a través de sus etiquetas.</p>
+            <p>Usar HTML semántico significa que al escribir el código, todo el contenido buscará
+                llevar la etiqueta más adecuada según su tipo.</p>
+            <p>Los lectores de pantalla para usuarios ciegos o con baja visión organizan la lectura del contenido
+                según la estructura del código. Entonces un código con buenas prácticas y semántica ayuda a que el sitio
+                sea adecuado para audiencias con diferentes necesidades.</p>
+            <div class="semantic__btns">
+                <div class="tooltip">
+                    <div role="button" class="semantic__btn semantic__btn-one">Botón con la etiqueta div</div>
+                    <p class="tooltip-text">La etiqueta HTML &lt;button&gt; está diseñada para ser accesible desde el teclado.</p>
+                </div>
+                <div>
+                    <button type="submit" class="semantic__btn">Botón con la etiqueta button</button>
+                </div>
+            </div>
+        </section>
+        <section class="images">
+            <h3>Imágenes</h3>
+            <p class="info">Las imágenes y los videos pueden crear barreras para los usuarios cuando no son accesibles.
+                Todas las imágenes deben tener el atributo alt donde se debe agregar una descripción adecuada, según el tipo
+                de imagen.</p>
+            <h4>Tipos de imagenes</h4>
+            <div class="cards">
+                <div class="card">
+                    <p class="card__title">Decorativas:</p>
+                    <p>Las imágenes decorativas se agregan con fines estéticos. El atributo alt debe quedar vacío, alt="" para que
+                        los lectores de pantalla puedan ignorarlas.</p>
+                    <img src="https://img.freepik.com/vector-gratis/concepto-entrega-segura-alimentos_23-2148567391.jpg?size=626&ext=jpg&ga=GA1.1.1539764126.1683131030&semt=robertav1_2_sidr"
+                        alt="" class="card__decorative-img">
+                </div>
+                <div class="card">
+                    <p class="card__title">Funcionales:</p>
+                    <p>Las imágenes funcionales son aquellas que se incluyen en enlaces, botones y otros elementos interactivos. 
+                        El atributo alt debe llevar información sobre el propósito del enlace.</p>
+                    <div class="social">
+                        <div class="social__picture">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOBJREFUSEvtlUEKwkAMRV9voi70GnoT14ILwQN4AUEE1+JJ9BguBPUiIinTEsPYoRmLC80ynfkv+ZnQgo6j6FifGGAAPIDbJ+AWsAXmQXgNLHMhGjACzkawB9xzIClAP9cqa9EOmIWKN8Aip3q5GxvyMAz5kiseA4jnOqqX1JQfBxtPsYJsB1egEhNxmYHEERAhCclPADlrizkAK530AmxHWlPgdTceQGo0Ii6QMrwALTIF9oqqrXUD7H68m50bYDvXj+DFGa9Ff0C9ULFFi72+h3pBaktbf//KT791lU0XnlOCSBmeGSSvAAAAAElFTkSuQmCC"
+                                alt="Go to our profile on Linkedin" class="social__img">
+                        </div>
+                        <div class="social__picture">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARBJREFUSEvlldENwjAMRK+bwCTAJMAkwCTAJMAksAnoVTFKUydNPvpVSxUtSXz23dXtNHN0M+fXcgG2kk6SVoHiu6RzeD6E+34ppegh6SjpU9CGBFdnnTMAcv5m6ynANyS3ijwc9uQCkKckzvM76AD0d3TyEiqJu8lVHwPuLHmOIvi1IDkXFRkFHj22h3qg6B8pRVQYi9f6mhQBUopak7N/IHANRa0g69SBKUV0gVXN360Ao8ngjQpE3ktCj5YY0eNRxH81VkyBcRj0jCI37HjtcVNtDLxfsmm8hg5m2xKQS40d8DowgelgSods5R5Ai4OYM1NDscfwbIqLNsGqsV0R8uXMp6JOy/2i1dp3/o/+D9mWMhnNBgLxAAAAAElFTkSuQmCC"
+                                alt="go to our profile on Tweeter">
+                        </div>
+                    <div class="social__picture tooltip"> 
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAW5JREFUSEvFlc1NQ0EMhCdNcAUqAS7cKQAJKgEk+gDK4ARUws+BOxUEfcjzZO1zNhuhp+wlSmJ7xuNZ70oLn9XC9bU3gCNJV5JOJJ12uvyI/14l3Uny9yml6oDCDxFBAsm9AxlIEPsk6TYHtwAEv0fRsx3mQ95LxF9nUi0AzOnguGq3ALwMaX4kXVTkWgDY02rFHmCYHkp6k/Qo6VzSs6Sv+N1dTPktwDoSadOHonTWDhsi95K+JR2E/gAQjwJ/ZwSAJIrjEgZoh91Et1OxIEKnU91tAHaUi+cx+D/ksNM8wy5ALtYbuh1XxQ8DIAlSbHIVM/sXANozg0oig2MIHMUZkohgu8gO4tO3NA8Z7bOldwaAVc+mFM/7ZyvA7KJE6943LL/PKGpZsrNmF7VaFejeMhtZS3ZVlnh20RzkdTFbvxuQsoz5XpQPji9Q3vUj65qY7KhyVeT9g/+tfQ/AbwYum70de3syR4Y6FLN4B78fNGgZwcR3kQAAAABJRU5ErkJggg=="
+                            alt="go to our profile on Instagram">
+                            <p class="tooltip-text">alt="Ir a nuestro perfil de Instagram"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="card__title">Informativas:</p>
+                    <p>Las imágenes informativas representan un concepto o información. El atributo alt debe contener el mismo texto que
+                        la imagen.</p>
+                    <img src="https://img.freepik.com/vector-gratis/servicio-entrega-instagram-story-collection_23-2148595073.jpg?size=626&ext=jpg&ga=GA1.1.1539764126.1683131030&semt=robertav1_2_sidr"
+                        class="card__informative-img" alt="Order and get free delivery service">
+                </div>
+            </div>
+        </section>
+        <section class="links">
+            <h3>Enlaces</h3>
+            <p class="info">Los enlaces se utilizan para crear un enlace a otras páginas, dentro de la misma página, a otros recursos, etc.</p>
+            <p class="bold">Para los enlaces:</p>
+            <p>Proporciona una descripción que indique el propósito del enlace.</p>
+            <p>Usa las pseudoclases hover y focus para resaltarlos mejor.</p>
+            <p>Darle al enlace un color diferente que al resto del texto no siempre es suficiente, ya que no todas las personas pueden
+                percibir los colores de la misma manera. Subrayar los enlaces permite una mejor visualización de los mismos.</p>
+            <p class="link__title">¿Necesitás ayuda? Contáctanos</p>
+            <div class="links__contact">
+                <p>Ponte en contacto con nuestro equipo de soporte.&nbsp;</p>
+                <div class="tooltip">
+                    <a class="links__link">Clic aquí</a>
+                    <p class="tooltip-text">Evita descripciones como "Clic aquí", "Ver más", etc.</p>
+                </div>
+            </div>
+        </section>
+        <section class="forms">
+            <h3>Formularios</h3>
+            <p class="info">Los formularios permiten la interacción y el manejo de la información.</p>
+            <p class="bold">Para los formularios:</p>
+            <p>Deben ser fáciles de usar, claros e intuitivos.</p>
+            <p>Operables por el teclado.</p>
+            <p>Cada input debe tener su etiqueta label asociada</p>
+            <p class="bold">Para navegar en el teclado se utilizan principalmente las siguientes teclas:</p>
+            <p><strong>Tab y Shift + Tab</strong> para moverse por todos los elementos que pueden ser activados.</p>
+            <p><strong>Flechas direccionales</strong> para moverse dentro de un elemento.</p>
+            <p><strong>Enter o espacio</strong> para activar o seleccionar un elemento.</p>
+            <form class="forms__form">
+                <label for="email">Correo electrónico</label>
+                <input type="text" id="email" placeholder="Ingresa tu correo electrónico">
+                <button class="forms__btn" id="forms__btn">Enviar</button>
+            </form>
+                <div class="tooltip forms__tooltip"><p class="tooltip-text">No eliminés el contorno (outline) ya que los usuarios del teclado perderán su orientación en la página.</p></div>
+        </section>
+    <h2 class="subtitle" id="aboutJS">Algunos cambios en nuestro código JavaScript</h2>
+    <section class="states">
+        <h3>ARIA</h3>
+        <p class="info">ARIA  (Accessible Rich Internet Applications) es un conjunto de roles y atributos que definen formas de hacer contenido web y aplicaciones web (especialmente
+            aquellas desarrolladas con JavaScript) más accesibles para personas con discapacidades..." <strong>MDN Web Docs</strong></p>
+        <p class="bold">Un ejemplo de ARIA con JavaScript</p>
+        <p>Los elementos dinámicos cambian de estado, por ejemplo, un menú desplegable se puede contraer o expandir. ARIA te permite
+            definir las propiedades y estados de los elementos.</p>
+        <p>Cuando tengás menús desplegables en tu web, debés cambiar dinámicamente el estado usando JavaScript para que
+            las tecnologías de apoyo puedan transmitir el cambio al usuario.</p>
+        <button class="states__btn" id="ariaBtn">Probalo aquí</button>
+        <p id="ariaListTitle">Algunos estados ARIA</p>
+        <ul id="ariaListItems">
+            <li>aria-busy</li>
+            <li>aria-checked</li>
+            <li>aria-expanded</li>
+            <li>aria-hidden</li>
+            <li>aria-disabled</li>
+        </ul>
+        <p id="aria-state">aria-expanded = false</p>
+    </section>
+    <section class="tools">
+        <h2 class="subtitle"  id="tools">Algunos sitios y herramientas útiles</h2>
+        <p class="bold">Pautas de Accesibilidad al Contenido en la Web (WCAG)</p>
+        <p>Son recomendaciones para crear contenido accesible.
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="tool__link" target="_blank">Ir al sitio de la WCAG</a></p>
+        <p class="bold">Servicio de validación de marcado del W3C.</p>
+        <p>Verifica que el contenido HTML no tenga errores. Si la estructura HTML tiene errores, las diferentes tecnologías de asistencia no pueden representarlo correctamente.
+            <a href="https://validator.w3.org/" class="tool__link" target="_blank">Servicio de validación de marcado</a>
+        </p>
+        <h3>Herramientas de evaluación automática</h3>
+        <p class="bold">Lighthouse</p>
+        <p>Podés usar Lighthouse desde DevTools para auditar la accesibilidad de tu página y generar un informe.</p>
+        <p class="bold">WAVE</p>
+        <p>WAVE facilita la evaluación humana y educa sobre accesibilidad.</p>
+        <p class="bold">Accessibility Insights</p>
+        <p>Accessibility Insights ayuda a los desarrolladores a encontrar y solucionar problemas de accesibilidad en sitios y aplicaciones web.</p>
+        <p class="bold">Funkify</p>
+        <p>Funkify actúa como un simulador de discapacidad y modifica tu sitio para que puedas verlo como lo ven otras personas.</p>
+        <h3>Herramientas que pueden ayudarte a testear tu sitio web</h3>
+        <h4>Software de lectura de pantalla para usuarios de Windows</h4>
+        <p class="bold">Narrador</p>
+        <p>Permite a los usuarios ciegos, con baja visión u otras capacidades, interactuar
+            con la web, aplicaciones y documentos a través del teclado usando diferentes comandos. <a
+                href="https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1"
+                class="tool__link" target="_blank">Guía para Narrador</a></p>
+        <p class="bold">NVDA</p>
+        <p>Este lector de pantalla está programado en Python, es gratis
+            y de código abierto. <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html"
+                class="tool__link" target="_blank">Guía para NVDA</a></p>
+        <h4>Software de lectura de pantalla para usuarios MAC OS</h4>
+        <p class="bold">VoiceOver</p>
+        <p>Es un lector de pantalla integrado que describe en voz alta lo que aparece en la pantalla de la computadora. <a
+                href="https://support.apple.com/guide/voiceover/welcome/mac" class="tool__link" target="_blank">Guía para VoiceOver</a>
+        </p>
+        <h4>Software de lectura de pantalla para usuarios Linux</h4>
+        <p class="bold">Orca</p>
+        <p>Es un lector de pantalla gratuito, de código abierto, flexible y extensible que brinda acceso gráfico al escritorio.
+            a través de voz y braille actualizable.<a href="https://help.gnome.org/users/orca/stable/index.html.en"
+                class="tool__link" target="_blank">Guía para Orca</a></p>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
